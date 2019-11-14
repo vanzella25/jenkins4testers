@@ -16,7 +16,7 @@ when "chrome"
   @driver = :selenium_chrome
 when "headless"
   Capybara.register_driver :selenium_chrome_headless do |app|
-    chrome_option = Selenium::WebDriver::chrome::Options.new.tap do |options|
+    chrome_option = Selenium::WebDriver::Chrome::Options.new.tap do |options|
       options.add_argument "--headless"
       options.add_argument "--disable-gpu"
       options.add_argument "--no-sandbox"
